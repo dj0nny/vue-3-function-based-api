@@ -4,7 +4,7 @@
 
 ## Getting Started
 
-As announced, in version 3 of Vue.js (the release will probably be in the third quarter of 2019, you can see the complete roadmap [here](https://github.com/vuejs/vue/projects/6)) there will be an important introduction: the function-based component API. But what exactly are they?
+As announced, in the version 3 of Vue.js (the release will probably be in the third quarter of 2019, you can see the complete roadmap [here](https://github.com/vuejs/vue/projects/6)) there will be an important introduction: the function-based component API. But what exactly is it?
 
 Introduced as an RFC for 3.x, the new API presents a clean and flexible way to compose logic between and inside components. Must be specified that for now, it is an **open RFC** which means it's not set in stone and can change based on users feedback.
 
@@ -53,7 +53,7 @@ You can clone this repository using __Git__:
 git clone https://github.com/dj0nny/vue-3-function-based.git
 ```
 
-Or download the repository [here](https://github.com/dj0nny/vue-3-function-based.git)
+Or download the repository [here](https://github.com/dj0nny/vue-3-function-based-api.git)
 
 ---
 
