@@ -26,7 +26,7 @@ You can install it, inside your Vue.js 2.x application via npm or yarn:
 ```
 npm install vue-function-api
 # OR
-yarn add install vue-function-api
+yarn add vue-function-api
 ```
 Or add it via CDN if you not using the CLI:
 
