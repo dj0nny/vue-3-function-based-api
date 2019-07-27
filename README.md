@@ -23,7 +23,7 @@ yarn global add @vue/cli
 
 You can install it, inside your Vue.js 2.x application via npm or yarn:
 
-```
+```bash
 npm install vue-function-api
 # OR
 yarn add vue-function-api
