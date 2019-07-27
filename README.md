@@ -77,6 +77,12 @@ The Vue development server it will be up and running at this address: http://loc
 * [Vue.js](https://vuejs.org/) - A Javascript framework
 * [Vue Function API](https://github.com/vuejs/vue-function-api) - provides function api from Vue3.x to Vue2.x for developing next-generation Vue applications.
 
+## Useful links
+
+* Function-based component API (extended discussion) - https://github.com/vuejs/rfcs/issues/55
+* Evan You Previews Vue.js 3.0 - https://medium.com/vue-mastery/evan-you-previews-vue-js-3-0-ab063dec3547
+* Vue Project Roadmap - https://github.com/vuejs/roadmap
+
 ## Contributing
 
 Pull Requests for adding features ⇄ and ★ are welcome 😎
