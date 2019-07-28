@@ -17,6 +17,16 @@ export default new Vuex.Store({
     [types.SET_NEWS_ITEMS](state, newsItems) {
       state.newsList = newsItems;
     },
+    [types.APPEND_NEWS_ITEMS](state, newsItems) {
+      const uniqueItems = {};
+      state.newsList = state.newsList.concat(newsItems).filter((item) => {
+        if (!uniqueItems[item.id]) {
+          uniqueItems[item.id] = true;
+          return true;
+        }
+        return false;
+      });
+    },
     [types.SET_CURRENT_NEWS](state, newsItems) {
       state.currentNews = newsItems;
     },
@@ -25,11 +35,15 @@ export default new Vuex.Store({
     },
   },
   actions: {
-    async [types.GET_NEWS]({ commit }, { type, page = 1 }) {
+    async [types.GET_NEWS]({ commit }, { type, page }) {
       commit(types.SET_LOADING, true);
       const res = await fetch(`${BASE_URL}/${type}?page=${page}`);
       const items = await res.json();
-      commit(types.SET_NEWS_ITEMS, items);
+      if (page === 1) {
+        commit(types.SET_NEWS_ITEMS, items);
+      } else {
+        commit(types.APPEND_NEWS_ITEMS, items);
+      }
       commit(types.SET_LOADING, false);
     },
   },
