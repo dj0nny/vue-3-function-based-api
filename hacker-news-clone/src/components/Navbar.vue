@@ -31,7 +31,7 @@ export default {
 }
 
 #navbar #logo {
-  border: 1px solid #fff;
+  outline: 1px solid #fff;
   margin-right: 5px;
 }
 
@@ -47,8 +47,12 @@ export default {
 #navbar ul#menu li.item {
   display: inline-block;
   margin-right: 10px;
-  padding-right: 10px;
-  border-right: 1px solid #000;
+}
+
+#navbar ul#menu li.item a::after {
+  content: "|";
+  padding-left: 10px;
+  color: #000;
 }
 
 #navbar ul#menu li.item a.router-link-exact-active.router-link-active {

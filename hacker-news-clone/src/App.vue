@@ -8,14 +8,14 @@
 </template>
 
 <script>
-import Navbar from './components/Navbar';
+import Navbar from './components/Navbar.vue';
 
 export default {
   name: 'App',
   components: {
-    Navbar
-  }
-}
+    Navbar,
+  },
+};
 </script>
 
 
@@ -24,6 +24,7 @@ body {
   font-family: Verdana, Geneva, sans-serif;
   font-size: 10pt;
   color: #828282;
+  counter-reset: news;
 }
 
 a {
