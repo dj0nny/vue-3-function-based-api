@@ -1,5 +1,11 @@
 # vue-3-function-based-examples
 
+[![vue](https://img.shields.io/badge/build%20with-Vue-blue)](https://img.shields.io/badge/build%20with-Vue-blue)
+[![vue](https://img.shields.io/github/languages/top/dj0nny/vue-3-function-based-api)](https://img.shields.io/github/languages/top/dj0nny/vue-3-function-based-api)
+[![npm version](https://badge.fury.io/js/vue.svg)](https://badge.fury.io/js/vue)
+[![npm version](https://badge.fury.io/js/vue-function-api.svg)](https://badge.fury.io/js/vue-function-api)
+[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/dwyl/esta/issues)
+
 > Examples built with the new Vue 3 function-based component API
 
 ## Getting Started
@@ -76,6 +82,7 @@ The Vue development server it will be up and running at this address: http://loc
 
 * [Vue.js](https://vuejs.org/) - A Javascript framework
 * [Vue Function API](https://github.com/vuejs/vue-function-api) - provides function api from Vue3.x to Vue2.x for developing next-generation Vue applications.
+* [vue-hooks](https://github.com/u3u/vue-hooks) - Awesome hooks for Vue.js
 
 ## Useful links
 
