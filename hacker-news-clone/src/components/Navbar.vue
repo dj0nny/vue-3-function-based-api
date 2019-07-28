@@ -2,13 +2,14 @@
   <div id="navbar">
     <img src="../assets/logo.gif" id="logo">
     <span>
-      <router-link to="/">Hacker News</router-link>
+      <router-link to="/news">Hacker News</router-link>
     </span>
     <ul id="menu">
-      <li class="item"><router-link to="/new">new</router-link></li>
+      <li class="item"><router-link to="/news">news</router-link></li>
+      <li class="item"><router-link to="/newest">newest</router-link></li>
       <li class="item"><router-link to="/ask">ask</router-link></li>
       <li class="item"><router-link to="/show">show</router-link></li>
-      <li class="item"><router-link to="/jobs ">jobs</router-link></li>
+      <li class="item"><router-link to="/jobs">jobs</router-link></li>
     </ul>
   </div>
 </template>

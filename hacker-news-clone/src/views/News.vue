@@ -13,8 +13,8 @@
 </template>
 
 <script>
-import { value, onCreated } from 'vue-function-api';
-import { useState, useActions } from '@u3u/vue-hooks';
+import { value, watch, onCreated } from 'vue-function-api';
+import { useState, useActions, useRouter } from '@u3u/vue-hooks';
 
 import types from '../types';
 import NewsItem from '../components/NewsItem.vue';
@@ -28,18 +28,28 @@ export default {
     const { newsList, loading } = useState(['newsList', 'loading']);
     const { GET_NEWS } = useActions([types.GET_NEWS]);
     const currentPage = value(1);
+    const { route } = useRouter();
 
-    onCreated(() => {
+    const setType = (type) => {
+      currentPage.value = 1;
       GET_NEWS({
-        type: 'news',
+        type,
         page: currentPage.value,
       });
+    };
+
+    watch(() => route.value.params.type, (type) => {
+      setType(type);
+    });
+
+    onCreated(() => {
+      setType(route.value.params.type);
     });
 
     const loadMore = () => {
       currentPage.value += 1;
       GET_NEWS({
-        type: 'news',
+        type: route.value.params.type,
         page: currentPage.value,
       });
     };

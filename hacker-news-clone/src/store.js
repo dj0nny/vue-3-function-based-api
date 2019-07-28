@@ -37,6 +37,9 @@ export default new Vuex.Store({
   actions: {
     async [types.GET_NEWS]({ commit }, { type, page }) {
       commit(types.SET_LOADING, true);
+      if (page === 1) {
+        commit(types.SET_NEWS_ITEMS, []);
+      }
       const res = await fetch(`${BASE_URL}/${type}?page=${page}`);
       const items = await res.json();
       if (page === 1) {
@@ -44,6 +47,13 @@ export default new Vuex.Store({
       } else {
         commit(types.APPEND_NEWS_ITEMS, items);
       }
+      commit(types.SET_LOADING, false);
+    },
+    async [types.GET_NEWS_DETAIL]({ commit }, id) {
+      commit(types.SET_LOADING, true);
+      const res = await fetch(`${BASE_URL}/item/${id}`);
+      const detail = await res.json();
+      commit(types.SET_CURRENT_NEWS, detail);
       commit(types.SET_LOADING, false);
     },
   },

@@ -1,9 +1,9 @@
 <template>
   <div class="news-item">
-    <a href="" class="title">{{ item.title }}</a>
+    <a :href="item.url" target="_blank" class="title">{{ item.title }}</a>
     <span class="domain">({{ item.domain }})</span>
     <div class="subtext">
-      {{ item.points }} points by {{ item.user }} {{ item.time_ago }} | {{ item.comments_count }} comments
+      {{ item.points }} points by {{ item.user }} {{ item.time_ago }} | <router-link :to="{name: 'news-detail', params: { id: item.id }}">{{ item.comments_count }} comments</router-link>
     </div>
   </div>
 </template>
@@ -29,7 +29,7 @@ export default {
 }
 
 a.title {
-  color: #828282;
+  color: #000;
 }
 
 span.domain {
