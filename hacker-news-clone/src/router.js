@@ -8,6 +8,10 @@ Vue.use(Router);
 export default new Router({
   routes: [
     {
+      path: '/',
+      redirect: '/news',
+    },
+    {
       path: '/news/:id',
       name: 'news-detail',
       component: NewsDetail,
